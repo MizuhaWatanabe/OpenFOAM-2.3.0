@@ -1,0 +1,160 @@
+make: Nothing to be done for `all'.
+
+========================================
+Start ThirdParty Allwmake
+========================================
+
+========================================
+Build MPI libraries if required
+
+========================================
+Build Scotch decomposition library scotch_6.0.0
+    /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0
+    scotch header in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0/include
+    scotch libs   in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64GccDPOpt/lib
+
+========================================
+Build PTScotch decomposition library scotch_6.0.0 (uses MPI)
+    /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0
+
+    ptscotch header in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0/include/openmpi-system
+    ptscotch libs   in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64GccDPOpt/lib/openmpi-system
+
+========================================
+Build Metis decomposition
+    optional component Metis was not found
+========================================
+Build CGAL
+    CGAL headers in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/CGAL-4.3/include
+    CGAL libs    in /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/CGAL-4.3/lib
+
+========================================
+Done ThirdParty Allwmake
+========================================
+
++ wmakePrintBuild -check
+no git description found
++ /bin/rm -f OpenFOAM/Make/linux64GccDPOpt/global.C OpenFOAM/Make/linux64GccDPOpt/global.o
++ wmakeLnInclude OpenFOAM
++ wmakeLnInclude OSspecific/POSIX
++ Pstream/Allwmake
++ wmake libso dummy
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/dummy/libPstream.so' is up to date.
++ case "$WM_MPLIB" in
++ set +x
+
+Note: ignore spurious warnings about missing mpicxx.h headers
+
+wmake libso mpi
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/openmpi-system/libPstream.so' is up to date.
++ OSspecific/POSIX/Allwmake
+Found <sys/inotify.h>  --  enabling inotify for file monitoring.
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libOSspecific.o' is up to date.
++ wmake libso OpenFOAM
+SOURCE=global/global.Cver ; sed -e 's!VERSION_STRING!2.3.0!' -e 's!BUILD_STRING!2.3.0-f5222ca19ce6!' $SOURCE > Make/linux64GccDPOpt/global.C; g++ -m64 -Dlinux64 -DWM_DP -Wall -Wextra -Wno-unused-parameter -Wold-style-cast -Wnon-virtual-dtor -O3  -DNoRepository -ftemplate-depth-100 -IMake/linux64GccDPOpt -IlnInclude -I. -I/root/OpenFOAM/OpenFOAM-2.3.0/src/OpenFOAM/lnInclude -I/root/OpenFOAM/OpenFOAM-2.3.0/src/OSspecific/POSIX/lnInclude   -fPIC -c Make/linux64GccDPOpt/global.C -o Make/linux64GccDPOpt/global.o
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libOpenFOAM.so' is up to date.
++ wmake libso fileFormats
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libfileFormats.so' is up to date.
++ wmake libso surfMesh
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libsurfMesh.so' is up to date.
++ wmake libso triSurface
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libtriSurface.so' is up to date.
++ wmake libso meshTools
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libmeshTools.so' is up to date.
++ wmake libso edgeMesh
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libedgeMesh.so' is up to date.
++ parallel/decompose/AllwmakeLnInclude
++ wmakeLnInclude decompositionMethods
++ wmakeLnInclude metisDecomp
++ wmakeLnInclude scotchDecomp
++ wmakeLnInclude ptscotchDecomp
++ dummyThirdParty/Allwmake
++ wmake libso scotchDecomp
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/dummy/libscotchDecomp.so' is up to date.
++ wmake libso ptscotchDecomp
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/dummy/libptscotchDecomp.so' is up to date.
++ wmake libso metisDecomp
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/dummy/libmetisDecomp.so' is up to date.
++ wmake libso MGridGen
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/dummy/libMGridGen.so' is up to date.
++ wmake libso finiteVolume
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libfiniteVolume.so' is up to date.
++ wmake libso lagrangian/basic
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/liblagrangian.so' is up to date.
++ wmake libso lagrangian/distributionModels
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdistributionModels.so' is up to date.
++ wmake libso genericPatchFields
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libgenericPatchFields.so' is up to date.
++ parallel/Allwmake
++ decompose/Allwmake
+using SCOTCH_ARCH_PATH=/root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0
++ wmakeLnInclude decompositionMethods
++ '[' -n /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/scotch_6.0.0 ']'
++ wmake libso scotchDecomp
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libscotchDecomp.so' is up to date.
++ '[' -d /root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/openmpi-system ']'
++ '[' scotch_6.0.0 = scotch_6.0.0 ']'
++ export LINK_FLAGS=-lscotch
++ LINK_FLAGS=-lscotch
++ wmakeMpiLib ptscotchDecomp
++ set +x
+wmake libso ptscotchDecomp
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/openmpi-system/libptscotchDecomp.so' is up to date.
++ cd metisDecomp
++ ./Allwmake libso
+using METIS_ARCH_PATH=/root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/metis-5.1.0
++ wmake libso decompositionMethods
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdecompositionMethods.so' is up to date.
++ wmake libso decompose
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdecompose.so' is up to date.
++ reconstruct/Allwmake
++ wmake libso reconstruct
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libreconstruct.so' is up to date.
++ wmake libso distributed
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdistributed.so' is up to date.
++ renumber/Allwmake
++ wmake libso renumberMethods
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/librenumberMethods.so' is up to date.
++ '[' -n /root/OpenFOAM/ThirdParty-2.3.0/platforms/linux64Gcc/boost_1_54_0 ']'
++ wmake libso SloanRenumber
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libSloanRenumber.so' is up to date.
++ '[' -n '' ']'
++ echo
+
++ echo 'Skipping zoltanRenumber'
+Skipping zoltanRenumber
++ echo
+
++ wmake libso conversion
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libconversion.so' is up to date.
++ wmake libso sampling
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libsampling.so' is up to date.
++ wmake libso mesh/extrudeModel
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libextrudeModel.so' is up to date.
++ wmake libso dynamicMesh
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdynamicMesh.so' is up to date.
++ wmake libso dynamicFvMesh
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libdynamicFvMesh.so' is up to date.
++ wmake libso topoChangerFvMesh
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libtopoChangerFvMesh.so' is up to date.
++ wmake libso ODE
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libODE.so' is up to date.
++ wmake libso randomProcesses
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/librandomProcesses.so' is up to date.
++ thermophysicalModels/Allwmake
++ wmake libso specie
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libspecie.so' is up to date.
++ wmake libso solidSpecie
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libsolidSpecie.so' is up to date.
++ wmake libso thermophysicalFunctions
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libthermophysicalFunctions.so' is up to date.
++ ./properties/Allwmake
++ wmake libso liquidProperties
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libliquidProperties.so' is up to date.
++ wmake libso liquidMixtureProperties
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libliquidMixtureProperties.so' is up to date.
++ wmake libso solidProperties
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libsolidProperties.so' is up to date.
++ wmake libso solidMixtureProperties
+'/root/OpenFOAM/OpenFOAM-2.3.0/platforms/linux64GccDPOpt/lib/libsolidMixtureProperties.so' is up to date.
++ wmake libso basic
