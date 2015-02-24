@@ -24,6 +24,9 @@ boundaryField
     {
         type            fixedValue;
         value           uniform 1;
+//	type		timeVaryingUniformFixedValue;
+//	fileName	"0/T.dat";
+//	outOfBounds	clump;
     }
 
     outlet

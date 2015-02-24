@@ -20,6 +20,7 @@ FoamFile
     left
     {
         type            symmetryPlane;
+        inGroups        1(symmetryPlane);
         nFaces          30;
         startFace       1930;
     }
@@ -32,6 +33,7 @@ FoamFile
     down
     {
         type            symmetryPlane;
+        inGroups        1(symmetryPlane);
         nFaces          30;
         startFace       1990;
     }
@@ -50,6 +52,7 @@ FoamFile
     frontAndBack
     {
         type            empty;
+        inGroups        1(empty);
         nFaces          2000;
         startFace       2070;
     }

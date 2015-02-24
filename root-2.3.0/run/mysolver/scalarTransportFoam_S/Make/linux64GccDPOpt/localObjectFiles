@@ -1,0 +1,2 @@
+LOCAL_OBJECTS = \
+scalarTransportFoam_S.o
