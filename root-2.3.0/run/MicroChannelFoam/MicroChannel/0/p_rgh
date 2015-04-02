@@ -9,40 +9,51 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       polyBoundaryMesh;
-    location    "constant/polyMesh";
-    object      boundary;
+    class       volScalarField;
+    object      p_rgh;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-4
-(
-    inlet
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    AirInlet
     {
-        type            patch;
-        nFaces          20;
-        startFace       15580;
+        type            fixedFluxPressure;
+        value           uniform 0;
     }
-    atmosphere
+
+    WaterInlet
     {
-        type            patch;
-        nFaces          20;
-        startFace       15600;
+        type            fixedFluxPressure;
+        value           uniform 0;
     }
-    walls
+
+    ChannelWall
     {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          800;
-        startFace       15620;
+        type            fixedFluxPressure;
+        value           uniform 0;
     }
+
+    Outlet
+    {
+        type            totalPressure;
+        p0              uniform 0;
+        U               U;
+        phi             phi;
+        rho             rho;
+        psi             none;
+        gamma           1;
+        value           uniform 0;
+    }
+
     frontAndBack
     {
         type            empty;
-        inGroups        1(empty);
-        nFaces          16000;
-        startFace       16420;
     }
-)
+}
 
 // ************************************************************************* //

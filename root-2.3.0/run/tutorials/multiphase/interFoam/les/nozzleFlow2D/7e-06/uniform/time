@@ -9,40 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       polyBoundaryMesh;
-    location    "constant/polyMesh";
-    object      boundary;
+    class       dictionary;
+    location    "7e-06/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-4
-(
-    inlet
-    {
-        type            patch;
-        nFaces          20;
-        startFace       15580;
-    }
-    atmosphere
-    {
-        type            patch;
-        nFaces          20;
-        startFace       15600;
-    }
-    walls
-    {
-        type            wall;
-        inGroups        1(wall);
-        nFaces          800;
-        startFace       15620;
-    }
-    frontAndBack
-    {
-        type            empty;
-        inGroups        1(empty);
-        nFaces          16000;
-        startFace       16420;
-    }
-)
+value           7e-06;
+
+name            "7e-06";
+
+index           888;
+
+deltaT          9.8979592e-09;
+
+deltaT0         9.8979592e-09;
+
 
 // ************************************************************************* //

@@ -15,33 +15,39 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-4
+5
 (
-    inlet
+    AirInlet
+    {
+        type            patch;
+        nFaces          10;
+        startFace       5870;
+    }
+    WaterInlet
     {
         type            patch;
         nFaces          20;
-        startFace       15580;
+        startFace       5880;
     }
-    atmosphere
-    {
-        type            patch;
-        nFaces          20;
-        startFace       15600;
-    }
-    walls
+    ChannelWall
     {
         type            wall;
         inGroups        1(wall);
-        nFaces          800;
-        startFace       15620;
+        nFaces          200;
+        startFace       5900;
+    }
+    Outlet
+    {
+        type            patch;
+        nFaces          30;
+        startFace       6100;
     }
     frontAndBack
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          16000;
-        startFace       16420;
+        nFaces          6000;
+        startFace       6130;
     }
 )
 

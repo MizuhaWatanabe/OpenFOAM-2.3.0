@@ -15,33 +15,47 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-4
+6
 (
+    axis
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          0;
+        startFace       14825;
+    }
     inlet
     {
         type            patch;
-        nFaces          20;
-        startFace       15580;
-    }
-    atmosphere
-    {
-        type            patch;
-        nFaces          20;
-        startFace       15600;
+        nFaces          30;
+        startFace       14825;
     }
     walls
     {
         type            wall;
         inGroups        1(wall);
-        nFaces          800;
-        startFace       15620;
+        nFaces          70;
+        startFace       14855;
     }
-    frontAndBack
+    atmosphere
     {
-        type            empty;
-        inGroups        1(empty);
-        nFaces          16000;
-        startFace       16420;
+        type            patch;
+        nFaces          175;
+        startFace       14925;
+    }
+    front
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          7500;
+        startFace       15100;
+    }
+    back
+    {
+        type            wedge;
+        inGroups        1(wedge);
+        nFaces          7500;
+        startFace       22600;
     }
 )
 
