@@ -37,7 +37,7 @@ boundaryField
         type            zeroGradient;
     }
 
-    atmosphere
+    Outlet
     {
         type            inletOutlet;
         inletValue      uniform 0;
