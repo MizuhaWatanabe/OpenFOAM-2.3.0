@@ -18,7 +18,7 @@ FoamFile
 defaultFieldValues
 (
     volScalarFieldValue alpha.water 1
-    volVectorFieldvalue U (0.1 0 0)
+    volVectorFieldValue U (0.1 0 0)
 );
 
 regions
@@ -29,7 +29,7 @@ regions
         fieldValues
         (
             volScalarFieldValue alpha.water 0
-            volVectorFieldvalue U (0.001 0 0)
+            volVectorFieldValue U (0.001 0 0)
         );
     }
 );
