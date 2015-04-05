@@ -24,7 +24,7 @@ actions
         source  boxToFace;
         sourceInfo
         {
-            box (0 4.49e-5 0)(0 4.5e-5 0.1e-5);
+            box (0 4.49e-5 0)(0.0001 4.5e-5 0.1e-5);
         }
     }
 
@@ -46,7 +46,7 @@ actions
         source  boxToFace;
         sourceInfo
         {
-            box (0 5.5e-5 0)(0 5.51e-5 0.1e-5);
+            box (0 5.5e-5 0)(0.0001 5.51e-5 0.1e-5);
         }
     }
 
