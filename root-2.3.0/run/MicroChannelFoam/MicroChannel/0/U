@@ -17,14 +17,14 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (0 0 0);
+internalField   uniform (0.1 0 0);
 
 boundaryField
 {
     AirInlet
     {
         type            fixedValue;
-        value           uniform (0.001 0 0);
+        value           uniform (0.1 0 0);
     }
     WaterInlet
     {
