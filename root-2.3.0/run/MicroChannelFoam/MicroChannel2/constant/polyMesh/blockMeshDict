@@ -101,7 +101,7 @@ boundary
     }
     FrontAndBack
     {
-        type wall;
+        type patch;
         faces
         (
             (0 1 4 3)
