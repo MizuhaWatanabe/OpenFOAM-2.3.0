@@ -20,25 +20,25 @@ internalField   uniform 0;
 
 boundaryField
 {
-    leftWall
+    AirInlet
     {
         type            fixedFluxPressure;
         value           uniform 0;
     }
 
-    rightWall
+    WatreInlet
     {
         type            fixedFluxPressure;
         value           uniform 0;
     }
 
-    lowerWall
+    ChannelWall
     {
         type            fixedFluxPressure;
         value           uniform 0;
     }
 
-    atmosphere
+    Outlet
     {
         type            totalPressure;
         p0              uniform 0;
@@ -50,7 +50,7 @@ boundaryField
         value           uniform 0;
     }
 
-    defaultFaces
+    FrontAndBack
     {
         type            empty;
     }
