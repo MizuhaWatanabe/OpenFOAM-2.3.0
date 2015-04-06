@@ -17,36 +17,37 @@ FoamFile
 
 5
 (
-    leftWall
-    {
-        type            wall;
-        nFaces          50;
-        startFace       4432;
-    }
-    rightWall
-    {
-        type            wall;
-        nFaces          50;
-        startFace       4482;
-    }
-    lowerWall
-    {
-        type            wall;
-        nFaces          62;
-        startFace       4532;
-    }
-    atmosphere
+    AirInlet
     {
         type            patch;
-        nFaces          46;
-        startFace       4594;
+        nFaces          5;
+        startFace       1380;
     }
-    defaultFaces
+    WaterInlet
+    {
+        type            patch;
+        nFaces          10;
+        startFace       1385;
+    }
+    ChannelWall
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          110;
+        startFace       1395;
+    }
+    Outlet
+    {
+        type            patch;
+        nFaces          15;
+        startFace       1505;
+    }
+    FrontAndBack
     {
         type            empty;
         inGroups        1(empty);
-        nFaces          4536;
-        startFace       4640;
+        nFaces          1450;
+        startFace       1520;
     }
 )
 
