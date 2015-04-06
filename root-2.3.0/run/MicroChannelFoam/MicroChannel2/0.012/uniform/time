@@ -9,43 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    location    "0";
-    object      alpha.water;
+    class       dictionary;
+    location    "0.012/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 0 0 0 0];
+value           0.012;
 
-internalField   uniform 1;
+name            "0.012";
 
-boundaryField
-{
-    AirInlet
-    {
-        type            fixedValue;
-        value           uniform 0;
-    }
-    WaterInlet
-    {
-        type            fixedValue;
-        value           uniform 1;
-    }
-    ChannelWall
-    {
-        type            zeroGradient;
-    }
-    Outlet
-    {
-        type            inletOutlet;
-        inletValue      uniform 0;
-        value           uniform 0;
-    }
-    FrontAndBack
-    {
-        type            empty;
-    }
-}
+index           8498;
+
+deltaT          1.1846e-06;
+
+deltaT0         1.1846e-06;
 
 
 // ************************************************************************* //
