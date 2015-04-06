@@ -26,7 +26,7 @@ boundaryField
         value           uniform 0;
     }
 
-    WatreInlet
+    WaterInlet
     {
         type            fixedFluxPressure;
         value           uniform 0;
